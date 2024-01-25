@@ -1,0 +1,47 @@
+.Dropdown {
+  @apply transition-all
+  duration-200
+  ease-linear
+  box-border
+  overflow-hidden
+  text-base
+  text-default50
+}
+.dropdownTitle {
+  @apply pt-5 flex
+  items-center
+  justify-between
+  font-semibold
+  cursor-pointer
+  hover:text-default200
+}
+.dropdownText {
+  @apply pt-5 pl-2
+}
+.title {
+  @apply flex items-center
+}
+.name {
+  @apply text-[18px]
+  font-normal
+  ml-4
+}
+.markerContainer {
+  @apply w-5 flex
+  items-center
+  justify-center
+}
+.icons {
+  svg {
+    path {
+      fill: #D4D4D8;
+    }
+  }
+}
+
+.iconsOpen {
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}

@@ -1,0 +1,33 @@
+.autocompleteSelect {
+  div[data-slot="base"] {
+    @apply data-[focus=true]:bg-white;
+  }
+  div[data-slot="base"] {
+    @apply data-[focus=true]:bg-white;
+  }
+  div[data-slot="input-wrapper"] {
+    @apply
+    data-[hover=true]:bg-white
+    data-[hover=true]:border-default400
+    data-[focus=true]:bg-white
+    data-[focus=true]:border-default400
+    focus-within:bg-white
+    h-[42px];
+  }
+  input {
+    @apply placeholder:text-default300 text-base;
+  }
+  label {
+    @apply text-default900 text-[13px] font-medium;
+  }
+  svg {
+    @apply text-default400;
+  }
+}
+
+.autocompleteSelectWithoutLabel {
+  div[data-slot="input-wrapper"] {
+    background: white ;
+    box-shadow: none;
+  }
+}

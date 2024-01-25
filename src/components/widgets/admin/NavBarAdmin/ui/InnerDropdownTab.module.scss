@@ -1,0 +1,17 @@
+.InnerDropdownTab {
+  .container {
+    @apply pl-3 cursor-pointer
+  }
+  .textWrapper {
+    @apply px-[6px] py-[8px]
+    font-normal
+    text-m
+    text-default300
+    leading-4
+    flex
+    hover:bg-default600
+    rounded-[5px]
+    items-center
+    justify-between
+  }
+}

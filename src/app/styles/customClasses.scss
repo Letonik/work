@@ -1,0 +1,32 @@
+.lichiScrollBar {
+  padding-right: 10px;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--default-200);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--default-400);
+    border-radius: 2px;
+  }
+}
+
+[data-remove-styles] * {
+  all: initial;
+}
+
+.editor {
+  ol, ul, div, p, table {
+    margin-bottom: 9px;
+  }
+  ul {
+    margin-left: 8px;
+    list-style: inside disc;
+  }
+  ol {
+    margin-left: 8px;
+    list-style: inside decimal;
+  }
+
+}

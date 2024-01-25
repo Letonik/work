@@ -1,0 +1,23 @@
+.nav {
+  @apply flex sm:w-full sm:gap-5 justify-center transition-all backdrop-blur-none;
+  // @apply flex sm:w-full h-[fit-content] sm:gap-5 justify-center bg-[linear-gradient(45deg,_#171717_0%,_#414146_100%)];
+}
+
+.scroll {
+  @apply h-[80px]  bg-[#ffffff]/[.7] backdrop-blur-lg
+}
+
+.initial {
+  @apply h-[100px] bg-[#ffffff]/[.0]
+}
+
+.item {
+  @apply text-center text-xxs sm:text-s font-bold leading-9 tracking-tight;
+}
+.active {
+  @apply text-zinc-100;
+}
+.noActive {
+  @apply text-zinc-400;
+}
+

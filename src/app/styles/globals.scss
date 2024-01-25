@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "fonts";
+@import "pages";
+@import "vars";
+@import "customEditor";
+@import "customNextUi";
+@import "customClasses";
+@import "customSwiper";
+@import "loader";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Futura PT", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  color: black;
+  background: white;
+}

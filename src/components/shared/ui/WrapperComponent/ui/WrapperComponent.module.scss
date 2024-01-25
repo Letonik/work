@@ -1,0 +1,9 @@
+.WrapperComponent {
+  padding: 35px;
+  //todo: Поменять цвет на var
+  background: white;
+  border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-basic);
+  position: relative;
+}

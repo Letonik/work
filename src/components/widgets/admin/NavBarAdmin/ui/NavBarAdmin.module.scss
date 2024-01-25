@@ -1,0 +1,149 @@
+.NavBarAdmin {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  height: 100vh;
+
+  .navBar {
+    width: 309px;
+    height: 100vh;
+    background: #27272A;
+    border-radius: 0 15px 15px 0;
+    padding: 20px 15px 20px 35px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      //todo: Поменять цвет на var
+      .buttonCollapsedNavBar {
+        width: 28px;
+        height: 28px;
+        background: #3F3F46;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .tabsContainer {
+      max-height: calc(100vh - 150px);
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: var(--default-900);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--default-200);
+        border-radius: 1px;
+      }
+    }
+
+    .tabs {
+      width: 257px !important;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+    }
+
+    //todo: Поменять цвет на var
+    .tabsCollapsed {
+
+    }
+
+    .tabsOpen {
+      width: 259px !important;
+      margin-top: 10px;
+
+      .dropdownContainer {
+        //todo: Поменять цвет на var
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        border-left: 1px solid white;
+      }
+    }
+  }
+
+  .pageWrapper {
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    padding: 35px;
+    box-sizing: border-box;
+
+    .title {
+      text-transform: uppercase;
+      padding-bottom: 35px;
+      font-weight: 400;
+      color: #2E3131CC;
+    }
+  }
+
+  .tabItem {
+    @apply flex mb-3
+    hover:bg-default600
+    rounded-[5px]
+    px-[5px]
+    py-[2px]
+    items-center
+  }
+
+  .tabName {
+    @apply text-[18px]
+    font-normal
+    text-default50
+    ml-4
+  }
+
+  .tabIcon {
+
+  }
+
+  .tabsClose {
+
+  }
+
+  .icons {
+    svg {
+      path {
+        fill: #D4D4D8;
+      }
+    }
+
+    &.active {
+      svg {
+        path {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+
+  .iconsClose {
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .iconsOpen {
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

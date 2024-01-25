@@ -1,0 +1,219 @@
+.MyDatePicker * {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}
+
+
+.MyDatePicker {
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Futura PT", sans-serif;
+  position: relative;
+
+  .inputContainer {
+    width: 100%;
+    min-width: 210px;
+    height: 56px;
+    padding: 5px 14px 5px 14px;
+    border-radius: 8px;
+    border: 2px solid #E4E4E7;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .inputInfo {
+      .title {
+        font-weight: 500;
+        font-size: 12px;
+        color: #171717;
+        line-height: 15px;
+      }
+      .date {
+        font-weight: 400;
+        font-size: 14px;
+        color: #71717A;
+        line-height: 16.8px;
+        display: flex;
+        align-items: center;
+        .input {
+          border: 1px solid #b2b2b2;
+          overflow: hidden;
+          width: 85px;
+          padding-left: 2px;
+          border-radius: 3px;
+          &.left {
+            margin-right: 2px;
+          }
+          &.right {
+            margin-left: 2px;
+          }
+          input {
+            background: #ffffff;
+            border: none;
+            padding-right: 10px;
+            width: 110px;
+            &:focus{
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mdpContainer {
+    position: absolute;
+    left: 0;
+    top: 58px;
+    width: 260px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fff;
+    box-shadow: 0px 0px 1px 0px #00000033, 0px 2px 30px 0px #0000000F, 0px 0px 15px 0px #00000008;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 2000;
+
+    .mdpcHead {
+      height: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 19px;
+      border-bottom: 1px solid #E4E4E7;
+
+      .monthContainer, .yearContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50px;
+
+        .value {
+          color: black;
+        }
+
+        .navigate {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .up, .down {
+            cursor: pointer;
+            position: relative;
+          }
+
+          .up {
+            transform: rotate(90deg);
+            top: 1px;
+          }
+
+          .down {
+            transform: rotate(-90deg);
+            bottom: 1px;
+          }
+        }
+      }
+
+      .monthContainer {
+        width: 80px;
+      }
+    }
+  }
+
+  .calendarContainer {
+    margin: 15px 10px 0 10px;
+
+    .calendarHead {
+      height: 30px;
+      width: 100%;
+      margin-top: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .weekDayName {
+        width: 31.4px;
+        font-weight: 700;
+        color: #666;
+        font-size: 9px;
+        text-align: center;
+      }
+    }
+
+    .calendarBody {
+      display: flex;
+      flex-wrap: wrap;
+
+      .dayContainer {
+        width: 31.4px;
+        height: 31.4px;
+        font-size: 12px;
+        color: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3px;
+
+        &.weekendDay {
+          color: #F31260;
+        }
+
+        &.disabled {
+          pointer-events: none;
+          color: #d0d0d0;
+
+          &.weekendDay {
+            color: #ffc3d8;
+          }
+        }
+
+        &.intermediateDay, &.selectedDay, &.selectedStartDay, &.selectedEndDay {
+          background: #F4F4F5;
+        }
+
+        &.selectedDay {
+          border-radius: 50%;
+        }
+
+        &.selectedStartDay {
+          border-radius: 50% 0 0 50%;
+        }
+
+        &.selectedEndDay {
+          border-radius: 0 50% 50% 0;
+        }
+
+        &.todayTimestamp {
+          .daySubContainer {
+            background: #F4F4F5;
+            border-radius: 50%;
+            width: 31.4px;
+            height: 31.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          &.selectedDay, &.selectedStartDay, &.selectedEndDay, &.intermediateDay  {
+            .daySubContainer {
+              border-radius: 50%;
+              background: #D4D4D8;
+            }
+          }
+        }
+
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}
+

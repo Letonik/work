@@ -1,0 +1,25 @@
+.ItemFormLayout {
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /*todo: поменять цвет*/
+    color: #171717;
+  }
+  .infoText, .errorText, .isRequired {
+    font-weight: 400;
+    font-size: 15px;
+    color: #17171766;
+  }
+  .isRequired {
+    font-size: 12px;
+  }
+  .errorText {
+    color: red;
+  }
+  .children {
+    margin-top: 15px;
+  }
+}

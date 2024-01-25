@@ -1,0 +1,10 @@
+.player {
+  @apply relative h-[100vh]
+}
+.upperLayer {
+  z-index: 1;
+  @apply absolute h-full w-full top-0 left-0 flex justify-center items-center;
+}
+.player video {
+  @apply object-cover;
+}
